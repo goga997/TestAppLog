@@ -30,8 +30,8 @@ class Gradient {
         gradientLayer.locations = locations
         
         // Set the start and end points of the gradient to create a linear direction
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.startPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 0)
         
         return gradientLayer
     }

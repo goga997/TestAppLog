@@ -75,11 +75,6 @@ class PageIndicatorView: UIView {
     
     private func setConstraits() {
         NSLayoutConstraint.activate([
-            
-//            firstIndicator.widthAnchor.constraint(equalToConstant: 17),
-//            secondIndicator.widthAnchor.constraint(equalToConstant: 17),
-//            thirdIndicator.widthAnchor.constraint(equalToConstant: 17),
-
             firstIndicatorView.topAnchor.constraint(equalTo: self.topAnchor),
             firstIndicatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             firstIndicatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor),

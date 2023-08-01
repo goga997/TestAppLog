@@ -26,12 +26,12 @@ class ThirdOnboardingViewController: UIViewController {
     
     private lazy var nextButton: UIButton = {
        let button = UIButton()
-        button.setTitle("Next", for: .normal)
+        button.setTitle("Start", for: .normal)
         button.titleLabel?.textColor = .white
         button.titleLabel?.font = .montserratRegular20()
         button.backgroundColor = #colorLiteral(red: 0.4100266099, green: 0.4064772129, blue: 0.9289067388, alpha: 1)
         button.layer.cornerRadius = 30
-        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -79,8 +79,17 @@ class ThirdOnboardingViewController: UIViewController {
         view.addSubview(nextButton)
     }
     
-    @objc private func nextButtonTapped() {
+    @objc private func startButtonTapped() {
+        let setPassVC = SetPasswordViewController()
+        setPassVC.modalPresentationStyle = .fullScreen
+        let transition = CATransition()
+        transition.duration = 0.6
+        transition.type = CATransitionType.fade
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
         
+        present(setPassVC, animated: false, completion: nil)
     }
 }
 
