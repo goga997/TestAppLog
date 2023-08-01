@@ -13,7 +13,7 @@ class SecondOnboardingViewController: UIViewController {
 
     private lazy var firstImageView: UIImageView = {
        let imageView = UIImageView()
-        imageView.backgroundColor = .white
+        imageView.image = UIImage(named: "secondOnboarding")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
