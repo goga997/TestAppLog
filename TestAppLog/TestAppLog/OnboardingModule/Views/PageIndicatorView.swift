@@ -62,7 +62,7 @@ class PageIndicatorView: UIView {
     
     public func animationFirst() {
         DispatchQueue.main.async {
-            UIView.animate(withDuration: 1.4) {
+            UIView.animate(withDuration: 1) {
                 self.firstIndicator.alpha = 1
                 self.firstIndicator.isHidden = false
                 self.firstIndicator.widthAnchor.constraint(equalToConstant: 40).isActive = true

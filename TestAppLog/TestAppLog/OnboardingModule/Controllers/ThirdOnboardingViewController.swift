@@ -1,27 +1,27 @@
 //
-//  SecondViewController.swift
+//  ThirdOnboardingViewController.swift
 //  TestAppLog
 //
-//  Created by Grigore on 31.07.2023.
+//  Created by Grigore on 01.08.2023.
 //
 
 import UIKit
 
-class SecondOnboardingViewController: UIViewController {
+class ThirdOnboardingViewController: UIViewController {
     
     let gradientLayer = Gradient.createLinearGradient()
 
     private lazy var firstImageView: UIImageView = {
        let imageView = UIImageView()
-        imageView.image = UIImage(named: "secondOnboarding")
+        imageView.image = UIImage(named: "thirdOnboarding")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private let titleText = UILabel(text: "Protect your Photos and Videos",
+    private let titleText = UILabel(text: "Hide your Private Data",
                                     font: .montserratBold26())
-    private let descriptionText = UILabel(text: "Only you can see your personal data!",
+    private let descriptionText = UILabel(text: "Manage your data personally!",
                                           font: .montserratRegular14())
     
     private lazy var nextButton: UIButton = {
@@ -52,7 +52,6 @@ class SecondOnboardingViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         //width - 390; height - 844; iPhone 14
-
         gradientLayer.frame = view.bounds //for screen rotation
     }
     
@@ -60,15 +59,14 @@ class SecondOnboardingViewController: UIViewController {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             UIView.animate(withDuration: 1.3) {
-                self.pageIndicatorView.secondIndicator.alpha = 1
-                self.pageIndicatorView.secondIndicator.widthAnchor.constraint(equalToConstant: 40).isActive = true
+                self.pageIndicatorView.thirdIndicator.alpha = 1
+                self.pageIndicatorView.secondIndicator.widthAnchor.constraint(equalToConstant: 17).isActive = true
                 self.pageIndicatorView.firstIndicator.widthAnchor.constraint(equalToConstant: 17).isActive = true
-                self.pageIndicatorView.firstIndicator.alpha = 0.2
+                self.pageIndicatorView.thirdIndicator.widthAnchor.constraint(equalToConstant: 40).isActive = true
+                self.pageIndicatorView.secondIndicator.alpha = 0.2
                 self.pageIndicatorView.firstIndicator.isHidden = false
-                self.pageIndicatorView.thirdIndicator.widthAnchor.constraint(equalToConstant: 17).isActive = true
             }
         }
-        
     }
     
     //SetUpView
@@ -82,21 +80,12 @@ class SecondOnboardingViewController: UIViewController {
     }
     
     @objc private func nextButtonTapped() {
-        let thirdVC = ThirdOnboardingViewController()
-        thirdVC.modalPresentationStyle = .fullScreen
-        let transition = CATransition()
-        transition.duration = 0.6
-        transition.type = CATransitionType.fade
-        transition.subtype = CATransitionSubtype.fromRight
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
         
-        present(thirdVC, animated: false, completion: nil)
     }
 }
 
 //MARK: - CONSTRAINTS
-extension SecondOnboardingViewController {
+extension ThirdOnboardingViewController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             firstImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 110),

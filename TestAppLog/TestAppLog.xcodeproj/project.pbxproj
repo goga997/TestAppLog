@@ -21,6 +21,7 @@
 		DF2E88DD2A77E60D00FF5C05 /* SecondOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E88DC2A77E60D00FF5C05 /* SecondOnboardingViewController.swift */; };
 		DF2E88DF2A77EBD500FF5C05 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E88DE2A77EBD500FF5C05 /* UIStackView+Extension.swift */; };
 		DF2E88E12A77EC7000FF5C05 /* PageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E88E02A77EC7000FF5C05 /* PageIndicatorView.swift */; };
+		DF2E88E72A78FB8100FF5C05 /* ThirdOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E88E62A78FB8100FF5C05 /* ThirdOnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DF2E88DC2A77E60D00FF5C05 /* SecondOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnboardingViewController.swift; sourceTree = "<group>"; };
 		DF2E88DE2A77EBD500FF5C05 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		DF2E88E02A77EC7000FF5C05 /* PageIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicatorView.swift; sourceTree = "<group>"; };
+		DF2E88E62A78FB8100FF5C05 /* ThirdOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				DF2E88722A77A9B500FF5C05 /* FirstOnboardingViewController.swift */,
 				DF2E88DC2A77E60D00FF5C05 /* SecondOnboardingViewController.swift */,
+				DF2E88E62A78FB8100FF5C05 /* ThirdOnboardingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				DF2E88DF2A77EBD500FF5C05 /* UIStackView+Extension.swift in Sources */,
 				DF2E88712A77A9B500FF5C05 /* SceneDelegate.swift in Sources */,
 				DF2E88832A77B17500FF5C05 /* Gradient.swift in Sources */,
+				DF2E88E72A78FB8100FF5C05 /* ThirdOnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
