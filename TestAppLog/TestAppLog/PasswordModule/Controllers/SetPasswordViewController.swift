@@ -12,13 +12,7 @@ class SetPasswordViewController: UIViewController {
     private let gradientLayer = Gradient.createLinearGradient()
     var textFields: [WhiteTextField] = []
     
-    private lazy var whiteTopBar: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "whiteTop")
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
+    private let whiteTopBar = WhiteTopBar(frame: .zero)
     
     private lazy var backButton: UIButton = {
         let button = UIButton(type: .system)
@@ -107,16 +101,22 @@ class SetPasswordViewController: UIViewController {
     @objc private func setButtonTapped() {
         let confirmPasswordVC = ConfirmPasswordViewController()
         confirmPasswordVC.digitsFromSetController = concatenateDigitsFromTextFields()
-        confirmPasswordVC.modalPresentationStyle = .fullScreen
+        if confirmPasswordVC.digitsFromSetController.count == 5 {
+            confirmPasswordVC.modalPresentationStyle = .fullScreen
+            let transition = CATransition()
+            transition.duration = 0.6
+            transition.type = CATransitionType.fade
+            transition.subtype = CATransitionSubtype.fromRight
+            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            view.window!.layer.add(transition, forKey: kCATransition)
+            present(confirmPasswordVC, animated: false, completion: nil)
+        } else {
+            descriptionText.text = "Please complete all fields to continue!"
+            descriptionText.textColor = .orange
+            descriptionText.font = .montserratRegular20()
+            descriptionText.adjustsFontSizeToFitWidth = true
+        }
         
-        let transition = CATransition()
-        transition.duration = 0.6
-        transition.type = CATransitionType.fade
-        transition.subtype = CATransitionSubtype.fromRight
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
-        
-        present(confirmPasswordVC, animated: false, completion: nil)
     }
     
     //MARK: - KEYBOARD
@@ -183,12 +183,12 @@ extension SetPasswordViewController {
             
             titleText.topAnchor.constraint(equalTo: whiteTopBar.bottomAnchor, constant: -30),
             titleText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleText.heightAnchor.constraint(equalToConstant: 20),
+            titleText.heightAnchor.constraint(equalToConstant: 27),
             
             descriptionText.topAnchor.constraint(equalTo: titleText.bottomAnchor, constant: 15),
             descriptionText.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 50),
             descriptionText.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -50),
-            descriptionText.heightAnchor.constraint(equalToConstant: 35),
+            descriptionText.heightAnchor.constraint(equalToConstant: 30),
             
             setButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             setButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),

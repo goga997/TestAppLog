@@ -27,6 +27,10 @@
 		DFD444222A79273F005C33A0 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFD444212A79273F005C33A0 /* Inter-Regular.ttf */; };
 		DFD444252A795751005C33A0 /* PasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444242A795751005C33A0 /* PasswordButton.swift */; };
 		DFD444272A795D6A005C33A0 /* ConfirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444262A795D6A005C33A0 /* ConfirmPasswordViewController.swift */; };
+		DFD444292A7A3E09005C33A0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444282A7A3E09005C33A0 /* UIViewController+Extension.swift */; };
+		DFD4442B2A7A3F9C005C33A0 /* WhiteTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4442A2A7A3F9C005C33A0 /* WhiteTopBar.swift */; };
+		DFD4442F2A7A4194005C33A0 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4442E2A7A4194005C33A0 /* DataBase.swift */; };
+		DFD444322A7A423A005C33A0 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444312A7A423A005C33A0 /* PasswordModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		DFD444212A79273F005C33A0 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		DFD444242A795751005C33A0 /* PasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordButton.swift; sourceTree = "<group>"; };
 		DFD444262A795D6A005C33A0 /* ConfirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordViewController.swift; sourceTree = "<group>"; };
+		DFD444282A7A3E09005C33A0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		DFD4442A2A7A3F9C005C33A0 /* WhiteTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTopBar.swift; sourceTree = "<group>"; };
+		DFD4442E2A7A4194005C33A0 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		DFD444312A7A423A005C33A0 /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +95,9 @@
 				DF2E88842A77C58F00FF5C05 /* Application */,
 				DF2E88852A77C59D00FF5C05 /* OnboardingModule */,
 				DF2E88E92A79005000FF5C05 /* PasswordModule */,
-				DF2E88872A77C60500FF5C05 /* Extensions */,
+				DFD4442C2A7A415B005C33A0 /* Services */,
 				DF2E888C2A77D95800FF5C05 /* SupportingFIlles */,
+				DF2E88872A77C60500FF5C05 /* Extensions */,
 				DF2E88772A77A9B600FF5C05 /* Assets.xcassets */,
 				DF2E88792A77A9B600FF5C05 /* LaunchScreen.storyboard */,
 				DF2E887C2A77A9B600FF5C05 /* Info.plist */,
@@ -147,6 +156,7 @@
 				DF2E88DA2A77DEB300FF5C05 /* UIFont+Extension.swift */,
 				DF2E888A2A77CD5300FF5C05 /* UILabel+Extension.swift */,
 				DF2E88DE2A77EBD500FF5C05 /* UIStackView+Extension.swift */,
+				DFD444282A7A3E09005C33A0 /* UIViewController+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -173,6 +183,7 @@
 		DF2E88E92A79005000FF5C05 /* PasswordModule */ = {
 			isa = PBXGroup;
 			children = (
+				DFD444302A7A422A005C33A0 /* Model */,
 				DF2E88EB2A7900E500FF5C05 /* Views */,
 				DF2E88EA2A7900DB00FF5C05 /* Controllers */,
 			);
@@ -201,8 +212,33 @@
 			children = (
 				DF2E88822A77B17500FF5C05 /* Gradient.swift */,
 				DFD444242A795751005C33A0 /* PasswordButton.swift */,
+				DFD4442A2A7A3F9C005C33A0 /* WhiteTopBar.swift */,
 			);
 			path = UIElements;
+			sourceTree = "<group>";
+		};
+		DFD4442C2A7A415B005C33A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DFD4442D2A7A4165005C33A0 /* DataBaseServices */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DFD4442D2A7A4165005C33A0 /* DataBaseServices */ = {
+			isa = PBXGroup;
+			children = (
+				DFD4442E2A7A4194005C33A0 /* DataBase.swift */,
+			);
+			path = DataBaseServices;
+			sourceTree = "<group>";
+		};
+		DFD444302A7A422A005C33A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFD444312A7A423A005C33A0 /* PasswordModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +318,11 @@
 				DF2E88DB2A77DEB300FF5C05 /* UIFont+Extension.swift in Sources */,
 				DFD4441C2A790BC4005C33A0 /* WhiteTextField.swift in Sources */,
 				DFD444252A795751005C33A0 /* PasswordButton.swift in Sources */,
+				DFD444292A7A3E09005C33A0 /* UIViewController+Extension.swift in Sources */,
+				DFD4442F2A7A4194005C33A0 /* DataBase.swift in Sources */,
 				DF2E88732A77A9B500FF5C05 /* FirstOnboardingViewController.swift in Sources */,
+				DFD444322A7A423A005C33A0 /* PasswordModel.swift in Sources */,
+				DFD4442B2A7A3F9C005C33A0 /* WhiteTopBar.swift in Sources */,
 				DF2E886F2A77A9B500FF5C05 /* AppDelegate.swift in Sources */,
 				DF2E88E12A77EC7000FF5C05 /* PageIndicatorView.swift in Sources */,
 				DF2E888B2A77CD5300FF5C05 /* UILabel+Extension.swift in Sources */,
