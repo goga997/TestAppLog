@@ -31,6 +31,7 @@
 		DFD4442B2A7A3F9C005C33A0 /* WhiteTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4442A2A7A3F9C005C33A0 /* WhiteTopBar.swift */; };
 		DFD4442F2A7A4194005C33A0 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4442E2A7A4194005C33A0 /* DataBase.swift */; };
 		DFD444322A7A423A005C33A0 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444312A7A423A005C33A0 /* PasswordModel.swift */; };
+		DFD444342A7A488E005C33A0 /* SuccesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444332A7A488E005C33A0 /* SuccesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		DFD4442A2A7A3F9C005C33A0 /* WhiteTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTopBar.swift; sourceTree = "<group>"; };
 		DFD4442E2A7A4194005C33A0 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		DFD444312A7A423A005C33A0 /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
+		DFD444332A7A488E005C33A0 /* SuccesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			children = (
 				DF2E88EC2A7900F900FF5C05 /* SetPasswordViewController.swift */,
 				DFD444262A795D6A005C33A0 /* ConfirmPasswordViewController.swift */,
+				DFD444332A7A488E005C33A0 /* SuccesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				DF2E886F2A77A9B500FF5C05 /* AppDelegate.swift in Sources */,
 				DF2E88E12A77EC7000FF5C05 /* PageIndicatorView.swift in Sources */,
 				DF2E888B2A77CD5300FF5C05 /* UILabel+Extension.swift in Sources */,
+				DFD444342A7A488E005C33A0 /* SuccesViewController.swift in Sources */,
 				DF2E88DD2A77E60D00FF5C05 /* SecondOnboardingViewController.swift in Sources */,
 				DFD444272A795D6A005C33A0 /* ConfirmPasswordViewController.swift in Sources */,
 				DF2E88DF2A77EBD500FF5C05 /* UIStackView+Extension.swift in Sources */,

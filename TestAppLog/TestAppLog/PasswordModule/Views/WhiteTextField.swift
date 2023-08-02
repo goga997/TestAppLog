@@ -25,6 +25,10 @@ class WhiteTextField: UITextField {
         keyboardType = .numberPad
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    public func deleteValueFromTextField() {
+        text = ""
+    }
 }
 
 

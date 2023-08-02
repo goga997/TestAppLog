@@ -86,6 +86,7 @@ class ConfirmPasswordViewController: UIViewController {
     
     //Collecting digits function
     private func concatenateDigitsFromConfirmTextFields() {
+        digitsFromConfirmController = ""
             for textField in textFields {
                 if let text = textField.text, let digit = text.first, digit.isNumber {
                     digitsFromConfirmController.append(digit)
@@ -95,13 +96,23 @@ class ConfirmPasswordViewController: UIViewController {
     
     @objc private func confirmButtonTapped() {
         concatenateDigitsFromConfirmTextFields()
-        
+        let succesVC = SuccesViewController()
         if digitsFromSetController == digitsFromConfirmController {
             DataBase.shared.addData(data: digitsFromConfirmController)
+            succesVC.modalPresentationStyle = .fullScreen
+            let transition = CATransition()
+            transition.duration = 0.6
+            transition.type = CATransitionType.fade
+            transition.subtype = CATransitionSubtype.fromRight
+            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            view.window!.layer.add(transition, forKey: kCATransition)
+            present(succesVC, animated: false, completion: nil)
         } else {
             presentSimpleAlert(title: "Unsucces", message: "Please complete all the fields and make sure they match the password")
+            textFields.forEach({$0.deleteValueFromTextField()})
         }
     }
+    
     
     //MARK: - KEYBOARD
     private func offKeyboard() {
