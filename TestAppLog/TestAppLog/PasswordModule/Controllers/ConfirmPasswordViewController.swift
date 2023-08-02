@@ -87,12 +87,12 @@ class ConfirmPasswordViewController: UIViewController {
     //Collecting digits function
     private func concatenateDigitsFromConfirmTextFields() {
         digitsFromConfirmController = ""
-            for textField in textFields {
-                if let text = textField.text, let digit = text.first, digit.isNumber {
-                    digitsFromConfirmController.append(digit)
-                }
+        for textField in textFields {
+            if let text = textField.text, let digit = text.first, digit.isNumber {
+                digitsFromConfirmController.append(digit)
             }
         }
+    }
     
     @objc private func confirmButtonTapped() {
         concatenateDigitsFromConfirmTextFields()
@@ -113,7 +113,6 @@ class ConfirmPasswordViewController: UIViewController {
         }
     }
     
-    
     //MARK: - KEYBOARD
     private func offKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -132,7 +131,6 @@ class ConfirmPasswordViewController: UIViewController {
         transition.subtype = CATransitionSubtype.fromLeft
         transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
-        
         dismiss(animated: true)
     }
 }
@@ -189,7 +187,6 @@ extension ConfirmPasswordViewController {
             confirmButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
             confirmButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.25641),
             confirmButton.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.11538),
-            
         ])
     }
 }

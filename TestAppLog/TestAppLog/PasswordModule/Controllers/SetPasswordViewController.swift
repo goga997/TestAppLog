@@ -90,13 +90,13 @@ class SetPasswordViewController: UIViewController {
     //Collecting digits function
     private func concatenateDigitsFromTextFields() -> String {
         var digits = ""
-            for textField in textFields {
-                if let text = textField.text, let digit = text.first, digit.isNumber {
-                    digits.append(digit)
-                }
+        for textField in textFields {
+            if let text = textField.text, let digit = text.first, digit.isNumber {
+                digits.append(digit)
             }
-            return digits
         }
+        return digits
+    }
     
     @objc private func setButtonTapped() {
         let confirmPasswordVC = ConfirmPasswordViewController()
@@ -116,7 +116,6 @@ class SetPasswordViewController: UIViewController {
             descriptionText.font = .montserratRegular20()
             descriptionText.adjustsFontSizeToFitWidth = true
         }
-        
     }
     
     //MARK: - KEYBOARD
@@ -137,7 +136,6 @@ class SetPasswordViewController: UIViewController {
         transition.subtype = CATransitionSubtype.fromLeft
         transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
-        
         dismiss(animated: true)
     }
 }
@@ -194,7 +192,6 @@ extension SetPasswordViewController {
             setButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
             setButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.25641),
             setButton.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.11538),
-            
         ])
     }
 }

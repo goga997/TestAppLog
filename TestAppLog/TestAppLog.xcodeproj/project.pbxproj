@@ -23,6 +23,7 @@
 		DF2E88E12A77EC7000FF5C05 /* PageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E88E02A77EC7000FF5C05 /* PageIndicatorView.swift */; };
 		DF2E88E72A78FB8100FF5C05 /* ThirdOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E88E62A78FB8100FF5C05 /* ThirdOnboardingViewController.swift */; };
 		DF2E88ED2A7900F900FF5C05 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E88EC2A7900F900FF5C05 /* SetPasswordViewController.swift */; };
+		DF4CBFC62A7A8ED100146E19 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4CBFC52A7A8ED100146E19 /* SplashScreen.swift */; };
 		DFD4441C2A790BC4005C33A0 /* WhiteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4441B2A790BC4005C33A0 /* WhiteTextField.swift */; };
 		DFD444222A79273F005C33A0 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFD444212A79273F005C33A0 /* Inter-Regular.ttf */; };
 		DFD444252A795751005C33A0 /* PasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444242A795751005C33A0 /* PasswordButton.swift */; };
@@ -30,7 +31,6 @@
 		DFD444292A7A3E09005C33A0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444282A7A3E09005C33A0 /* UIViewController+Extension.swift */; };
 		DFD4442B2A7A3F9C005C33A0 /* WhiteTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4442A2A7A3F9C005C33A0 /* WhiteTopBar.swift */; };
 		DFD4442F2A7A4194005C33A0 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD4442E2A7A4194005C33A0 /* DataBase.swift */; };
-		DFD444322A7A423A005C33A0 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444312A7A423A005C33A0 /* PasswordModel.swift */; };
 		DFD444342A7A488E005C33A0 /* SuccesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD444332A7A488E005C33A0 /* SuccesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +53,7 @@
 		DF2E88E02A77EC7000FF5C05 /* PageIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicatorView.swift; sourceTree = "<group>"; };
 		DF2E88E62A78FB8100FF5C05 /* ThirdOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdOnboardingViewController.swift; sourceTree = "<group>"; };
 		DF2E88EC2A7900F900FF5C05 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
+		DF4CBFC52A7A8ED100146E19 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		DFD4441B2A790BC4005C33A0 /* WhiteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTextField.swift; sourceTree = "<group>"; };
 		DFD444212A79273F005C33A0 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		DFD444242A795751005C33A0 /* PasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordButton.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		DFD444282A7A3E09005C33A0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DFD4442A2A7A3F9C005C33A0 /* WhiteTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTopBar.swift; sourceTree = "<group>"; };
 		DFD4442E2A7A4194005C33A0 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		DFD444312A7A423A005C33A0 /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
 		DFD444332A7A488E005C33A0 /* SuccesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2E88842A77C58F00FF5C05 /* Application */,
+				DF4CBFC42A7A8EB300146E19 /* SplashScreen */,
 				DF2E88852A77C59D00FF5C05 /* OnboardingModule */,
 				DF2E88E92A79005000FF5C05 /* PasswordModule */,
 				DFD4442C2A7A415B005C33A0 /* Services */,
@@ -185,7 +186,6 @@
 		DF2E88E92A79005000FF5C05 /* PasswordModule */ = {
 			isa = PBXGroup;
 			children = (
-				DFD444302A7A422A005C33A0 /* Model */,
 				DF2E88EB2A7900E500FF5C05 /* Views */,
 				DF2E88EA2A7900DB00FF5C05 /* Controllers */,
 			);
@@ -208,6 +208,14 @@
 				DFD4441B2A790BC4005C33A0 /* WhiteTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DF4CBFC42A7A8EB300146E19 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DF4CBFC52A7A8ED100146E19 /* SplashScreen.swift */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 		DFD444232A79571B005C33A0 /* UIElements */ = {
@@ -234,14 +242,6 @@
 				DFD4442E2A7A4194005C33A0 /* DataBase.swift */,
 			);
 			path = DataBaseServices;
-			sourceTree = "<group>";
-		};
-		DFD444302A7A422A005C33A0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DFD444312A7A423A005C33A0 /* PasswordModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,13 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4CBFC62A7A8ED100146E19 /* SplashScreen.swift in Sources */,
 				DF2E88DB2A77DEB300FF5C05 /* UIFont+Extension.swift in Sources */,
 				DFD4441C2A790BC4005C33A0 /* WhiteTextField.swift in Sources */,
 				DFD444252A795751005C33A0 /* PasswordButton.swift in Sources */,
 				DFD444292A7A3E09005C33A0 /* UIViewController+Extension.swift in Sources */,
 				DFD4442F2A7A4194005C33A0 /* DataBase.swift in Sources */,
 				DF2E88732A77A9B500FF5C05 /* FirstOnboardingViewController.swift in Sources */,
-				DFD444322A7A423A005C33A0 /* PasswordModel.swift in Sources */,
 				DFD4442B2A7A3F9C005C33A0 /* WhiteTopBar.swift in Sources */,
 				DF2E886F2A77A9B500FF5C05 /* AppDelegate.swift in Sources */,
 				DF2E88E12A77EC7000FF5C05 /* PageIndicatorView.swift in Sources */,

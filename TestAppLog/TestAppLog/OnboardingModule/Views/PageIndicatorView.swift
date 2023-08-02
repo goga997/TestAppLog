@@ -10,7 +10,7 @@ import UIKit
 class PageIndicatorView: UIView {
     
     public let firstIndicator: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = .white
         view.alpha = 0.2
         view.layer.cornerRadius = 5
@@ -20,7 +20,7 @@ class PageIndicatorView: UIView {
     }()
     
     public let secondIndicator: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = .white
         view.alpha = 0.2
         view.layer.cornerRadius = 5
@@ -29,7 +29,7 @@ class PageIndicatorView: UIView {
     }()
     
     public let thirdIndicator: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = .white
         view.alpha = 0.2
         view.layer.cornerRadius = 5
@@ -39,6 +39,7 @@ class PageIndicatorView: UIView {
     
     private var firstIndicatorView = UIStackView()
     
+    //MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -49,12 +50,8 @@ class PageIndicatorView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     private func setUpView() {
-        firstIndicatorView = UIStackView(arrangedSubviews: [firstIndicator,
-                                                            secondIndicator,
-                                                            thirdIndicator],
+        firstIndicatorView = UIStackView(arrangedSubviews: [firstIndicator, secondIndicator, thirdIndicator],
                                          axis: .horizontal,
                                          spacing: 9)
         self.addSubview(firstIndicatorView)
@@ -68,7 +65,7 @@ class PageIndicatorView: UIView {
                 self.firstIndicator.widthAnchor.constraint(equalToConstant: 40).isActive = true
                 self.secondIndicator.widthAnchor.constraint(equalToConstant: 17).isActive = true
                 self.thirdIndicator.widthAnchor.constraint(equalToConstant: 17).isActive = true
-
+                
             }
         }
     }

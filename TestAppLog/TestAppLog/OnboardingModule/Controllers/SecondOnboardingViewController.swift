@@ -10,9 +10,9 @@ import UIKit
 class SecondOnboardingViewController: UIViewController {
     
     let gradientLayer = Gradient.createLinearGradient()
-
+    
     private lazy var firstImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.image = UIImage(named: "secondOnboarding")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,7 +25,7 @@ class SecondOnboardingViewController: UIViewController {
                                           font: .montserratRegular14())
     
     private lazy var nextButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("Next", for: .normal)
         button.titleLabel?.textColor = .white
         button.titleLabel?.font = .montserratRegular20()
@@ -52,7 +52,6 @@ class SecondOnboardingViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         //width - 390; height - 844; iPhone 14
-
         gradientLayer.frame = view.bounds //for screen rotation
     }
     
@@ -68,7 +67,6 @@ class SecondOnboardingViewController: UIViewController {
                 self.pageIndicatorView.thirdIndicator.widthAnchor.constraint(equalToConstant: 17).isActive = true
             }
         }
-        
     }
     
     //SetUpView
@@ -117,7 +115,7 @@ extension SecondOnboardingViewController {
             pageIndicatorView.topAnchor.constraint(equalTo: firstImageView.bottomAnchor, constant: 180),
             pageIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pageIndicatorView.heightAnchor.constraint(equalToConstant: 8),
-
+            
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
             nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),

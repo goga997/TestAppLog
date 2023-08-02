@@ -10,9 +10,9 @@ import UIKit
 class ThirdOnboardingViewController: UIViewController {
     
     let gradientLayer = Gradient.createLinearGradient()
-
+    
     private lazy var firstImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.image = UIImage(named: "thirdOnboarding")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,7 +25,7 @@ class ThirdOnboardingViewController: UIViewController {
                                           font: .montserratRegular14())
     
     private lazy var nextButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("Start", for: .normal)
         button.titleLabel?.textColor = .white
         button.titleLabel?.font = .montserratRegular20()
@@ -115,7 +115,7 @@ extension ThirdOnboardingViewController {
             pageIndicatorView.topAnchor.constraint(equalTo: firstImageView.bottomAnchor, constant: 180),
             pageIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pageIndicatorView.heightAnchor.constraint(equalToConstant: 8),
-
+            
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
             nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),

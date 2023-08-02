@@ -8,11 +8,11 @@
 import UIKit
 
 class FirstOnboardingViewController: UIViewController {
-
+    
     let gradientLayer = Gradient.createLinearGradient()
-
+    
     private lazy var firstImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.image = UIImage(named: "firstOnboarding")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,7 +25,7 @@ class FirstOnboardingViewController: UIViewController {
                                           font: .montserratRegular14())
     
     private lazy var nextButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("Next", for: .normal)
         button.titleLabel?.textColor = .white
         button.titleLabel?.font = .montserratRegular20()
@@ -42,19 +42,16 @@ class FirstOnboardingViewController: UIViewController {
         return view
     }()
     
-    
     //MARK: - VC LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         setConstraints()
-        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         //width - 390; height - 844; iPhone 14
-
         gradientLayer.frame = view.bounds //for screen rotation
     }
     
@@ -85,9 +82,7 @@ class FirstOnboardingViewController: UIViewController {
         
         present(secondVC, animated: false, completion: nil)
     }
-
 }
-
 
 //MARK: - CONSTRAINTS
 extension FirstOnboardingViewController {
@@ -106,7 +101,7 @@ extension FirstOnboardingViewController {
             descriptionText.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 50),
             descriptionText.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -50),
             descriptionText.heightAnchor.constraint(equalToConstant: 35),
-
+            
             pageIndicatorView.topAnchor.constraint(equalTo: firstImageView.bottomAnchor, constant: 180),
             pageIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pageIndicatorView.heightAnchor.constraint(equalToConstant: 8),

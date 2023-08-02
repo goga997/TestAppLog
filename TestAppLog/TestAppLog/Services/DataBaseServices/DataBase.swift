@@ -32,7 +32,6 @@ class DataBase {
         }
     }
     
-    
     func getData() -> String {
         guard let decodedData = UserDefaults.standard.data(forKey: "password") else { return "There is Empty" }
         let decoder = JSONDecoder()
@@ -45,7 +44,6 @@ class DataBase {
         }
         return ""
     }
-    
     
     func saveData() -> Bool {
         let temporarContainer = dataContainer
@@ -61,7 +59,6 @@ class DataBase {
         
         return userDefaults.synchronize()
     }
-    
     
     func deleteValueFromUserDefaults(forKey key: String) {
         UserDefaults.standard.removeObject(forKey: key)

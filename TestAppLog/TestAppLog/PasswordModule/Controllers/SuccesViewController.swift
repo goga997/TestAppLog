@@ -31,7 +31,6 @@ class SuccesViewController: UIViewController {
     //MARK: - VIEW LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         showPassword()
         setUpView()
         setConstraints()
@@ -48,7 +47,7 @@ class SuccesViewController: UIViewController {
     @objc private func mainScreenButtonTapped() {
         DataBase.shared.deleteValueFromUserDefaults(forKey: "password")
         print(DataBase.shared.getData()) //verification
-
+        
         self.presentingViewController?.presentingViewController?.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
     
@@ -57,6 +56,7 @@ class SuccesViewController: UIViewController {
     }
 }
 
+//MARK: - CONSTRAINTS
 extension SuccesViewController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
